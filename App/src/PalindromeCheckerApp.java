@@ -1,32 +1,28 @@
 /**
- * UC2: Print a Hardcoded Palindrome Result
+ * UC3: Palindrome Check Using String Reverse
  * Palindrome Checker Application
  */
 
-public class UseCase2PalindromeCheckerApp {
+public class UseCase3PalindromeCheckerApp {
 
-    /**
-     * Main Method – Entry point of the Java application
-     * JVM invokes this method automatically.
-     */
     public static void main(String[] args) {
 
-        // Hardcoded String Literal
-        String word = "madam";
+        // Original String
+        String original = "level";
 
-        // Reverse the string
+        // Variable to store reversed string
         String reversed = "";
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversed = reversed + word.charAt(i);
+
+        // Loop to reverse the string
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);
         }
 
-        // Conditional Statement to check palindrome
-        if (word.equals(reversed)) {
-            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        // Compare original and reversed using equals()
+        if (original.equals(reversed)) {
+            System.out.println("The word \"" + original + "\" is a Palindrome.");
         } else {
-            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+            System.out.println("The word \"" + original + "\" is NOT a Palindrome.");
         }
-
-        System.out.println("Program executed successfully.");
     }
 }
